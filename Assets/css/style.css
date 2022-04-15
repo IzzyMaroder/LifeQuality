@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*:after,*:before {
+    margin: inherit;
+    padding: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit
+}
+
+html {
+    scroll-behavior: smooth
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+.wrapper {
+    width: 18.75rem;
+    margin: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        width:26.38rem
+    }
+   
+}
+
+@media only screen and (min-width: 1200px) {
+    main {
+        display: flex
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .right-content {
+        
+        display: block;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: #c9c4c4;
+        width: 50%;
+        height: 100;
+    }
+}
+
+
+.bg-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .bg-container {
+        height:28.75rem
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .bg-container {
+        height:100vh;
+        width: 50%
+    }
+}
+
+
+
+
+
+.form__container {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400
+}
+
+.form__content {
+    position: relative
+}
+
+.form__content--input {
+    width: 100%;
+    height: 3.125rem;
+    padding-left: 20px;
+    border-color: rgba(62,62,62,0.8);
+    border-width: 1px;
+    outline: 0;
+    border-radius: 999rem;
+    -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+    font-size: 1rem;
+    color: #3e3e3e
+}
+
+.form__content--input::-webkit-input-placeholder {
+    font-style: italic
+}
+
+.form__content--input:-ms-input-placeholder {
+    font-style: italic
+}
+
+.form__content--input::-ms-input-placeholder {
+    font-style: italic
+}
+
+.form__content--input::placeholder {
+    font-style: italic
+}
+
+.form__content--input+.form__content--search-icon {
+    
+    display: inline-flex;
+    position: absolute;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    width: 1.6rem;
+    height: 1.6rem;
+    right: 1rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-image: url(../img/magnifier-icon.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+}
+
+
+
+.bar {
+    border-radius: 5px;
+    margin: 0.6rem;
+    border: 1px solid #c9c4c4;
+    
+}
+.content-bar {
+    color: #fff;
+    border-radius: 5px;
+   
+}
+
+.table-container {
+    margin-top: 1.5rem;
+}
+
+
+.table-container  section{
+    margin-top: 1rem;
+    font-family: "Roboto", sans-serif;
+   
+}
+
+.summary{
+    margin: 1rem 0;
+}
+.general-score {
+    margin-top: .5rem;
+}

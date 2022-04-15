@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Roboto&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>Life quality</title>
+</head>
+
+<body>
+
+    <main x-data='life_quality'>
+        <div class="bg-container">
+            <img src="Assets/img/img1.svg">
+        </div>
+
+        <div class="right-content">
+            <div class="wrapper">
+                <div id="input">
+                    <div class="form__container">
+                        <div class="form__content">
+                            <input class="form__content--input" type="text" placeholder="Search for a city..."
+                                x-model='città' x-on:change='getQualityofLife(città)' 
+                                
+                            />
+                            <button class="form__content--search-icon" type="submit" 
+                                ></button>
+                        </div>
+                       
+
+                    </div>
+                </div>
+
+                <template x-if="currentQuality !== null">
+                    <div class="table-container">
+                        <span class="title"><b>LIFE QUALITY SCORE: </b></span>
+                
+                        <template x-for="i in 16" >
+                            
+                            <section class="element">
+                                <div x-text="currentQuality.categories[i].name"> </div>
+                                <div class="bar" style="background-color: #fff;">
+                                    <div class="content-bar"
+                                        x-data="{colors:[`${currentQuality.categories[i].color}`]}"
+                                        x-bind:style="{ backgroundColor:colors , width: `${currentQuality.categories[i].score_out_of_10}`*10 +'%' }"
+                                        x-text="currentQuality.categories[i].score_out_of_10.toFixed(0.5)"
+                                        >
+                                    </div>
+                                </div>
+                            </section>
+
+                        </template>
+
+                        <div class="summary">
+                            <b>SUMMARY: </b> <span x-html="currentQuality.summary"></span>
+                        </div>
+                        <div class="general-score" x-text="'TOTAL SCORE: '+ `${currentQuality.teleport_city_score.toFixed(1)}`+'/100'"></div>
+
+                    </div>
+                </template>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="Assets/js/main.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>
