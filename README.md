@@ -5,7 +5,7 @@
   <h3 align="center">LifeQuality APP</h3>
 
   <p align="center">
-    Applicazione che calcola la qualità della vita nei vari paesi.
+    Applicazione che calcola la qualità della vita nei vari paesi del mondo.
     <br />
     <a href="https://github.com/IzzyMaroder/LifeQuality"><strong>Explore the docs »</strong></a>
     <br />
